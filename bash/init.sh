@@ -1,5 +1,4 @@
 #!/bin/bash
-
 DIRECTORY="/usr/local/mariadb/var/"
 
 # Check & Copy DB Files
@@ -8,8 +7,7 @@ if [ "`ls -A $DIRECTORY`" = "" ]; then
   mv /opt/backup/mysql-data/* $DIRECTORY
 fi
 
-
-# ÀË¬dªA°È¥¼±Ò°Ê®É°õ¦æ
+# æª¢æŸ¥æœå‹™æœªå•Ÿå‹•æ™‚åŸ·è¡Œ
 for SERVICE in mariadb nginx php-fpm redis
 do
   if ps ax | grep -v grep | grep $SERVICE > /dev/null
@@ -20,5 +18,5 @@ do
   fi
 done
 
-# ²MªÅªì©l°õ¦æ³]©w¸ê®Æ
+# æ¸…ç©ºåˆå§‹åŸ·è¡Œè¨­å®šè³‡æ–™
 cat /dev/null > /opt/bash/init.sh

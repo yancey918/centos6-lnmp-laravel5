@@ -3,8 +3,8 @@
 CONTAINERID="${1}";
 
 if [ "$CONTAINERID" == "" ]; then
-echo "please enter container id";
-echo "ex: sh enter_docker.sh laravel5";
+echo "please keyin {Container-id or Name}";
+echo "ex: sh enter-docker.sh laravel5";
 exit;
 fi
 

@@ -5,11 +5,11 @@ DIRECTORY="/usr/local/mariadb/var/"
 # Check & Copy DB Files
 if [ "`ls -A $DIRECTORY`" = "" ]; then
   echo "$DIRECTORY not database files, run copy default database files to here"
-  cp -r /opt/backup/mysql-data/* $DIRECTORY
+  mv /opt/backup/mysql-data/* $DIRECTORY
 fi
 
 
-# Check & RUN Service
+# 檢查服務未啟動時執行
 for SERVICE in mariadb nginx php-fpm redis
 do
   if ps ax | grep -v grep | grep $SERVICE > /dev/null
@@ -20,4 +20,5 @@ do
   fi
 done
 
-rm -rf /opt
+# 清空初始執行設定資料
+cat /dev/null > /opt/bash/init.sh

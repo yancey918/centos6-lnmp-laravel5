@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docker+LNMP 開發環境</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="imagine@gmail.com">
+<meta name="description" content="您已成功安裝 Docker+LNMP 開發環境">
+<style type="text/css">
+<!--
+body {
+color:#333333;
+font-family:tahoma,arial,宋体,helvetica,sans-serif;
+}
+.links {color: #009900}
+#main {
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
+-->
+</style>
+</head>
+<body>
+<div id="main">
+<h2>
+
+        <p>Docker (Centos6-Lnmp-Laravel5) </p>
+
+        <h3><a id="user-content-description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+
+        <p>Package: Lnmp1.2 (setup by Burgess & Imagine)</p>
+
+        <ol>
+            <li>Nginx</li>
+            <li>PHP 5.6.9</li>
+            <li>MariaDB 10.0.17</li>
+            <li>Redis</li>
+            <li>vim, wget, composer, git, tar, color-hostname</li>
+        </ol>
+
+        <blockquote>
+            <p>Username：root<br/>
+            Password：P@ss0wrd</p>
+        </blockquote>
+
+        <h3><a id="user-content-config-path" class="anchor" href="#config-path" aria-hidden="true"><span class="octicon octicon-link"></span></a>Config Path</h3>
+
+        <ul>
+            <li>LNMP相關配置文件
+                <ol>
+                    <li>Nginx主配置文件：/usr/local/nginx/conf/nginx.conf</li>
+                    <li>虛擬主機配置文件：/usr/local/nginx/conf/vhost/域名.conf</li>
+                    <li>PHP 配置文件：/usr/local/php/etc/php.ini</li>
+                    <li>php-fpm 配置文件：/usr/local/php/etc/php-fpm.conf</li>
+                    <li>PHP配置文件：/usr/local/php/etc/php.ini</li>
+                    <li>MySQL配置文件：/etc/my.cnf</li>
+                    <li>Redis 配置文件：/usr/local/redis/etc/redis.conf<br/><br/></li>
+                </ol>
+            </li>
+            <li>本地端與容器對應路徑
+                <ol>
+                    <li>/home/wwwroot/website : C:\Users\{Your Username}\Documents\Kitematic\project</li>
+                    <li>/usr/local/mariadb/var: C:\Users\{Your Username}\Documents\Kitematic\project\database</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3><a id="user-content-config-port" class="anchor" href="#config-port" aria-hidden="true"><span class="octicon octicon-link"></span></a>Config Port</h3>
+
+        <ol>
+            <li>&nbsp;&nbsp;&nbsp;80：/home/wwwroot/default - 導覽頁面</li>
+            <li>&nbsp;&nbsp;&nbsp;81：/home/wwwroot/laravel5/public - Laravel5 ClearVer</li>
+            <li>&nbsp;&nbsp;&nbsp;81：/home/wwwroot/website/public - Project Dir</li>
+            <li>3306：MariaDB Port</li>
+        </ol>
+
+
+
+
+
+
+
+</h2>
+
+<p>
+    <a href="/p.php" target="_blank" class="links">查看主機狀態</a>&nbsp;&nbsp;
+    <a href="/phpinfo.php" target="_blank" class="links">phpinfo</a>&nbsp;&nbsp;
+    <a href="/phpmyadmin" target="_blank" class="links">phpMyAdmin</a>&nbsp;&nbsp;
+    <a href="/phpredisadmin" target="_blank" class="links">phpRedisAdmin</a>&nbsp;&nbsp;
+</p>
+
+</div>
+</body>
+</html>
